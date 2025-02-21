@@ -20,8 +20,6 @@ A **Background Service** runs in the background and allows long-running tasks ev
 ### **Example of Background Service**
 
 ```kotlin
-kotlin
-CopyEdit
 class MyService : Service() {
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         Thread {
@@ -57,8 +55,6 @@ A **Foreground Service** runs in the background **but with a persistent notifica
 ### **Example of Foreground Service**
 
 ```kotlin
-kotlin
-CopyEdit
 class MyForegroundService : Service() {
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         val notification = NotificationCompat.Builder(this, "channel_id")
@@ -100,8 +96,6 @@ class MyForegroundService : Service() {
 ### **Example of WorkManager**
 
 ```kotlin
-kotlin
-CopyEdit
 val workRequest = OneTimeWorkRequestBuilder<MyWorker>().build()
 WorkManager.getInstance(context).enqueue(workRequest)
 
